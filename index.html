@@ -66,7 +66,24 @@
     .btn:hover{transform: translateY(-1px)}
     main{padding:26px 0 10px}
 
-    .hero{padding:34px 0 16px}
+    .hero{
+      padding:34px 0 16px;
+      position: relative;
+    }
+    
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: url("suds-and-shine-logo.jpeg") center / 420px no-repeat;
+      opacity:0.04;
+      pointer-events:none;
+    }
+    
+    .hero .card{
+      position: relative;
+    }
+    
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch}
     .card{
       background: rgba(12,18,32,.8);
