@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="/favicon.png?v=2" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="/favicon.png?v=3">
 
   <style>
     :root{
@@ -234,7 +234,7 @@
           Mobile detailing service focused on quality results and straightforward pricing.
         </p>
         <div class="cta">
-          <!-- Replace phone number later -->
+          
           <a class="btn primary" href="#contact">Request Availability</a>
           <a class="btn" href="tel:+13528042239">Call</a>
           <a class="btn" href="sms:+13528042239">Text</a>
@@ -350,8 +350,8 @@
     <p class="section-sub">Send your details and we will confirm pricing and availability.</p>
 
     <div class="cta" style="margin-bottom:14px">
-    <a class="btn primary" href="tel:+13528042239">Call</a>
-    <a class="btn" href="sms:+13528042239">Text</a>
+      <a class="btn primary" href="sms:+13528042239">Text</a>
+      <a class="btn" href="tel:+13528042239">Call</a>
     </div>
 
     <div class="card contact">
@@ -362,9 +362,6 @@
 
         <label for="name">Name</label>
         <input id="name" name="name" autocomplete="name" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required />
        
         <label for="phone">Phone Number</label>
         <input
@@ -376,11 +373,43 @@
           required
         />
 
+        <label for="location">Service Location</label>
+        <input
+          id="location"
+          name="location"
+          placeholder="City or ZIP code"
+          autocomplete="off"
+          required
+        />
+        
+        <label for="vehicle">Vehicle</label>
+        <input
+          id="vehicle"
+          name="vehicle"
+          placeholder="Year/Make/Model (ex: 2020 Toyota Camry)"
+          autocomplete="off"
+          required
+        />
+
         <label for="service">Service Requested</label>
         <input id="service" name="service" placeholder="Exterior / Interior / Combo" required />
 
-        <label for="msg">Message</label>
-        <textarea id="msg" name="message" placeholder="Vehicle type, condition, city, and preferred days/times." required></textarea>
+        <label for="availability">Preferred Days / Times</label>
+        <input
+          id="availability"
+          name="availability"
+          placeholder="Example: Weekdays after 4pm or Saturday morning"
+          autocomplete="off"
+          required
+        />
+
+        <label for="msg">Concerns</label>
+        <textarea
+          id="msg"
+          name="message"
+          placeholder="Stains, pet hair, odors, or anything you'd like us to know."
+          required
+        ></textarea>
 
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
           <button class="btn primary" type="submit">Send Request</button>
