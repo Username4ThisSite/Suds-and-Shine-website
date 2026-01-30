@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Suds &amp; Shine Auto Detailing</title>
-  <meta name="description" content="Professional mobile auto detailing with clear pricing and reliable results." />
+  <meta name="description" content="Welcome to Suds & Shine Auto Detailing" />
   <style>
     :root{
       --bg:#070a10;
@@ -151,34 +151,6 @@
       font-size:13px;
       margin-top:10px;
     }
-    body::before,
-    body::after{
-      content: "";
-      position: fixed;
-      top: 50%;
-      width: 180px;
-      height: 180px;
-      background: url("suds-and-shine-logo.jpg") center / contain no-repeat;
-      opacity: 0.06;            /* VERY subtle */
-      pointer-events: none;     /* can’t click it */
-      transform: translateY(-50%);
-      z-index: 0;
-    }
-
-    /* Left logo */
-    body::before{
-      left: 14px;
-    }
-
-    /* Right logo */
-    body::after{
-      right: 14px;
-    }
-  
-    header, main, footer{
-      position: relative;
-      z-index: 1;
-    }
 
     @media(max-width:900px){
       .hero-grid{grid-template-columns:1fr}
@@ -190,6 +162,33 @@
       .grid-2{grid-template-columns:1fr}
       .gallery{grid-template-columns:1fr}
     }
+    
+    .logo-divider{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    
+   .logo-divider::before,
+   .logo-divider::after{
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(
+      to right,
+      transparent,
+      var(--accent),
+      transparent
+    );
+    }
+
+    .logo-divider img{
+      height: 48px;
+      margin: 0 18px;
+      opacity: 0.9;
+    }
+  
   </style>
 </head>
 
@@ -219,8 +218,7 @@
       <div class="card">
         <h1>Professional Detailing With Clear Pricing</h1>
         <p class="sub">
-          Mobile interior and exterior detailing focused on proper cleaning techniques, consistent results,
-          and straightforward packages. No unnecessary upsells—just quality work.
+          Mobile auto detailing focused on quality results and straightforward pricing.
         </p>
         <div class="cta">
           <!-- Replace phone number later -->
@@ -245,6 +243,10 @@
       </div>
     </div>
   </section>
+  
+  <div class="logo-divider">
+  <img src="suds-and-shine-logo.jpg" alt="Suds & Shine logo">
+  </div>
 
   <section id="packages">
     <h2>Packages</h2>
@@ -289,6 +291,10 @@
     </div>
   </section>
 
+  <div class="logo-divider">
+  <img src="suds-and-shine-logo.jpg" alt="Suds & Shine logo">
+  </div>
+
   <section id="gallery">
     <h2>Gallery</h2>
     <p class="section-sub">A selection of recent interior and exterior details showcasing our work and attention to detail.</p>
@@ -298,6 +304,10 @@
       <img src="wheel-before-after.jpeg" alt="Wheels before and after detailing" class="ph">
     </div>
   </section>
+
+  <div class="logo-divider">
+  <img src="suds-and-shine-logo.jpg" alt="Suds & Shine logo">
+  </div>
 
   <section id="service-area">
     <div class="grid-2">
@@ -317,6 +327,10 @@
       </div>
     </div>
   </section>
+
+  <div class="logo-divider">
+  <img src="suds-and-shine-logo.jpg" alt="Suds & Shine logo">
+  </div>
 
   <section id="contact">
     <h2>Contact &amp; Booking</h2>
