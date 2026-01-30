@@ -23,7 +23,6 @@
       color:var(--text);
     background:
       radial-gradient(900px 500px at 10% -10%, rgba(57,255,136,.18), transparent 60%),
-      url("suds-and-shine-logo.jpg") center / 1100px no-repeat fixed,
       radial-gradient(800px 480px at 90% 0%, rgba(59,130,246,.14), transparent 55%),
       var(--bg);
       line-height:1.55;
@@ -151,6 +150,34 @@
       text-align:center;
       font-size:13px;
       margin-top:10px;
+    }
+    body::before,
+    body::after{
+      content: "";
+      position: fixed;
+      top: 50%;
+      width: 220px;
+      height: 220px;
+      background: url("suds-and-shine-logo.jpg") center / contain no-repeat;
+      opacity: 0.06;            /* VERY subtle */
+      pointer-events: none;     /* can’t click it */
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    /* Left logo */
+    body::before{
+      left: -40px;
+    }
+
+    /* Right logo */
+    body::after{
+      right: -40px;
+    }
+  
+    header, main, footer{
+      position: relative;
+      z-index: 1;
     }
 
     @media(max-width:900px){
